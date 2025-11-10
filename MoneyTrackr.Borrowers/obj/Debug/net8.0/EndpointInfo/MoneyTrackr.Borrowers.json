@@ -1,0 +1,375 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MoneyTrackr.Borrowers",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/MoneyTrackr/loans": {
+      "get": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/loans/{fullName}": {
+      "get": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "fullName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/borrowers/{id}": {
+      "get": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/loan": {
+      "post": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Borrower"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Borrower"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Borrower"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/loan/{id}": {
+      "put": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Loan"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Loan"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Loan"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/borrower/{id}": {
+      "put": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Borrower"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Borrower"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Borrower"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/borrowers/3year-status/{months}": {
+      "get": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "months",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/loans/{loanId}/interest": {
+      "get": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "parameters": [
+          {
+            "name": "loanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MoneyTrackr/loans/all/interest": {
+      "get": {
+        "tags": [
+          "MoneyTrackr"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Borrower": {
+        "required": [
+          "address",
+          "fullName",
+          "phoneNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "maxLength": 150,
+            "minLength": 1,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "address": {
+            "maxLength": 250,
+            "minLength": 1,
+            "type": "string"
+          },
+          "loans": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Loan"
+            },
+            "nullable": true
+          },
+          "hasReachedThreeYears": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "totalBorrowedAmount": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Loan": {
+        "required": [
+          "amount",
+          "borrowerId",
+          "interestRate",
+          "startDate"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "borrowerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "interestRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deductedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "isPaid": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
