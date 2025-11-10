@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|c:\\users\\udayabhaskar.kommine\\desktop\\training\\interview\\moneytrackr\\moneytrackr.borrowers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|c:\\users\\udayabhaskar.kommine\\desktop\\training\\interview\\moneytrackr\\moneytrackr.borrowers\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|c:\\users\\udayabhaskar.kommine\\desktop\\training\\interview\\moneytrackr\\moneytrackr.borrowers\\controllers\\moneytrackrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\controllers\\moneytrackrcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\models\\borrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Migrations\\20251110124859_Four.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MoneyTrackr.Borrowers\\Migrations\\20251110124859_Four.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|c:\\users\\udayabhaskar.kommine\\desktop\\training\\interview\\moneytrackr\\moneytrackr.borrowers\\migrations\\moneytrackrdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\migrations\\moneytrackrdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,12 +47,16 @@
       "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\repository\\moneytrackrdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Migrations\\20251110111905_Thrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MoneyTrackr.Borrowers\\Migrations\\20251110111905_Thrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|c:\\users\\udayabhaskar.kommine\\desktop\\training\\interview\\moneytrackr\\moneytrackr.borrowers\\migrations\\20251110110528_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\migrations\\20251110110528_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|c:\\users\\udayabhaskar.kommine\\desktop\\training\\interview\\moneytrackr\\moneytrackr.borrowers\\migrations\\20251110124859_four.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\migrations\\20251110124859_four.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|c:\\users\\udayabhaskar.kommine\\desktop\\training\\interview\\moneytrackr\\moneytrackr.borrowers\\migrations\\20251110111905_thrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7971C6E-226F-4FC1-A366-89AC153C13A8}|MoneyTrackr.Borrowers\\MoneyTrackr.Borrowers.csproj|solutionrelative:moneytrackr.borrowers\\migrations\\20251110111905_thrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +90,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Program.cs",
+              "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Program.cs",
+              "ToolTip": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Program.cs",
+              "RelativeToolTip": "MoneyTrackr.Borrowers\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T13:08:01.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\appsettings.json",
+              "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\appsettings.json",
+              "ToolTip": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\appsettings.json",
+              "RelativeToolTip": "MoneyTrackr.Borrowers\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T13:07:56.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Repository\\Repository.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Repository\\Repository.cs",
@@ -90,12 +124,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Repository\\Repository.cs",
               "ViewState": "AgIAAH8AAAAAAAAAAADwv6YAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:15:20.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:15:20.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LoanService.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Services\\LoanService.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Services\\LoanService.cs",
@@ -103,12 +136,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Services\\LoanService.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAAwHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:15:34.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:15:34.995Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Repository\\IRepository.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Repository\\IRepository.cs",
@@ -116,12 +148,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Repository\\IRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAiwBYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:20:16.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:20:16.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ILoanService.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Services\\ILoanService.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Services\\ILoanService.cs",
@@ -129,12 +160,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Services\\ILoanService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:40:49.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:40:49.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MoneyTrackrController.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Controllers\\MoneyTrackrController.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Controllers\\MoneyTrackrController.cs",
@@ -147,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Borrower.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Models\\Borrower.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Models\\Borrower.cs",
@@ -155,12 +185,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Models\\Borrower.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAADwvxYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:07:37.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:07:37.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "20251110124859_Four.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Migrations\\20251110124859_Four.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Migrations\\20251110124859_Four.cs",
@@ -168,12 +197,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Migrations\\20251110124859_Four.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:49:00.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T12:49:00.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MoneyTrackrDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Migrations\\MoneyTrackrDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Migrations\\MoneyTrackrDbContextModelSnapshot.cs",
@@ -181,12 +209,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Migrations\\MoneyTrackrDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:48:03.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T12:48:03.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Loan.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Models\\Loan.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Models\\Loan.cs",
@@ -194,12 +221,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Models\\Loan.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwBUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:07:26.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:07:26.33Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MoneyTrackrDbContext.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Repository\\MoneyTrackrDbContext.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Repository\\MoneyTrackrDbContext.cs",
@@ -207,12 +233,11 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Repository\\MoneyTrackrDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:55:38.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:55:38.837Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "20251110111905_Thrid.cs",
               "DocumentMoniker": "C:\\Users\\udayabhaskar.kommine\\Desktop\\Training\\interview\\MoneyTrackr\\MoneyTrackr.Borrowers\\Migrations\\20251110111905_Thrid.cs",
               "RelativeDocumentMoniker": "MoneyTrackr.Borrowers\\Migrations\\20251110111905_Thrid.cs",
@@ -220,8 +245,7 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Migrations\\20251110111905_Thrid.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:19:05.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:19:05.536Z"
             },
             {
               "$type": "Document",
@@ -233,8 +257,7 @@
               "RelativeToolTip": "MoneyTrackr.Borrowers\\Migrations\\20251110110528_second.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:05:39.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:05:39.026Z"
             }
           ]
         },
