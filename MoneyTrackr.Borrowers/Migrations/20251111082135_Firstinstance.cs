@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MoneyTrackr.Borrowers.Migrations
 {
     /// <inheritdoc />
-    public partial class firstinstence : Migration
+    public partial class Firstinstance : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,11 +23,9 @@ namespace MoneyTrackr.Borrowers.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     FullName = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Email = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: true)
+                    PhoneNumber = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    PhoneNumber = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Address = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: true)
+                    Address = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -43,9 +41,11 @@ namespace MoneyTrackr.Borrowers.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     BorrowerId = table.Column<int>(type: "int", nullable: false),
-                    Amount = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    InterestRate = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    Amount = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
+                    InterestRate = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    PartialPayment = table.Column<decimal>(type: "decimal(10,2)", nullable: false, defaultValue: 0.0m),
+                    PartialPaymentPaidDate = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     IsPaid = table.Column<bool>(type: "tinyint(1)", nullable: false, defaultValue: false)
                 },
                 constraints: table =>

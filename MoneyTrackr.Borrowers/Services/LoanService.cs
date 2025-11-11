@@ -1,4 +1,5 @@
-﻿using MoneyTrackr.Borrowers.Models;
+﻿using MoneyTrackr.Borrowers.Helpers;
+using MoneyTrackr.Borrowers.Models;
 using MoneyTrackr.Borrowers.Repository;
 
 namespace MoneyTrackr.Borrowers.Services
@@ -16,99 +17,167 @@ namespace MoneyTrackr.Borrowers.Services
 
         public async Task<IEnumerable<Borrower>> GetAllLoansAsync()
         {
-            return await _borrowerRepo.GetAllAsync();
+            try
+            {
+                return await _borrowerRepo.GetAllAsync();
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message,ex.ErrorCode);
+            }
         }
 
-        public async Task<Borrower?> GetBorrowerWithLoansAsync(int id)
+        public async Task<Borrower?> GetBorrowerWithLoansAsync(int borrowerId)
         {
-            return await _borrowerRepo.GetByIdAsync(id) as Borrower;
+            try
+            {
+                return await _borrowerRepo.GetByIdAsync(borrowerId) as Borrower;
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
         public async Task<IEnumerable<Borrower>> GetLoansByBorrowerNameAsync(string fullName)
         {
-            return await _borrowerRepo.GetByNameAsync(fullName);
+            try
+            {
+                return await _borrowerRepo.GetByNameAsync(fullName);
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
         public async Task AddLoanAsync(Borrower borrowerInput)
         {
-            // Ensure the borrower has at least one loan
-            var newLoan = borrowerInput.Loans.FirstOrDefault();
-            if (newLoan == null)
-                throw new ArgumentException("At least one loan must be provided with the borrower.");
-
-            // Get all borrowers from repository
-            var existingBorrowers = await _borrowerRepo.GetByNameAsync(borrowerInput.FullName);
-
-            var existingBorrower = existingBorrowers
-                .FirstOrDefault(b => b.FullName.Equals(borrowerInput.FullName, StringComparison.OrdinalIgnoreCase));
-
-            if (existingBorrower == null)
+            try
             {
-                // Create a new borrower with all details
-                var newBorrower = new Borrower
-                {
-                    FullName = borrowerInput.FullName,
-                    PhoneNumber = borrowerInput.PhoneNumber,
-                    Address = borrowerInput.Address,
-                    Loans = new List<Loan> { newLoan }
-                };
+                var newLoan = borrowerInput.Loans.FirstOrDefault();
+                if (newLoan == null)
+                    throw new ArgumentException("At least one loan must be provided with the borrower.");
 
-                // Save borrower (and their first loan)
-                await _borrowerRepo.AddAsync(newBorrower);
-            }
-            else
-            {
-                bool loanExists = existingBorrower.Loans
-                                  .Any(l => l.Amount == newLoan.Amount && l.StartDate == newLoan.StartDate);
+                var existingBorrowers = await _borrowerRepo.GetByNameAsync(borrowerInput.FullName);
+                var existingBorrower = existingBorrowers
+                    .FirstOrDefault(b => b.FullName.Equals(borrowerInput.FullName, StringComparison.OrdinalIgnoreCase));
 
-                if (!loanExists) 
+                if (existingBorrower == null)
                 {
-                    // Link the loan to the existing borrower
-                    newLoan.BorrowerId = existingBorrower.Id;
-                    await _loanRepo.AddAsync(newLoan);
+                    var newBorrower = new Borrower
+                    {
+                        FullName = borrowerInput.FullName,
+                        PhoneNumber = borrowerInput.PhoneNumber,
+                        Address = borrowerInput.Address,
+                        Loans = new List<Loan> { newLoan }
+                    };
+                    await _borrowerRepo.AddAsync(newBorrower);
                 }
                 else
-                { 
-                    throw new ArgumentException("A similar loan already exists for this borrower.");
+                {
+                    bool loanExists = existingBorrower.Loans
+                        .Any(l => l.Amount == newLoan.Amount && l.StartDate == newLoan.StartDate);
+
+                    if (!loanExists)
+                    {
+                        newLoan.BorrowerId = existingBorrower.Id;
+                        await _loanRepo.AddAsync(newLoan);
+                    }
+                    else
+                    {
+                        throw new ArgumentException("A similar loan already exists for this borrower.");
+                    }
                 }
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
             }
         }
 
-        public async Task UpdateLoanAsync(int id, Loan loan)
+        public async Task UpdateLoanAsync(int loanId, Loan loan)
         {
-           await _loanRepo.UpdateAsync(id, loan);
+            try
+            {
+                await _loanRepo.UpdateAsync(loanId, loan);
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
-        public async Task DeleteLoanAsync(int id)
+        public async Task DeleteLoanAsync(int loanId)
         {
-           await _loanRepo.DeleteAsync(id);
+            try
+            {
+                await _loanRepo.DeleteAsync(loanId);
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
         public async Task UpdateBorrowerAsync(int borrowerId, Borrower borrower)
         {
-            await _borrowerRepo.UpdateAsync(borrowerId, borrower);
+            try
+            {
+                await _borrowerRepo.UpdateAsync(borrowerId, borrower);
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
         public async Task<IEnumerable<Borrower>> GetAllBorrowersWhoReached3YearsInMonthAsync(int month)
         {
-            return await _borrowerRepo.GetBorrowers3YearAnniversaryAsync(month);
+            try
+            {
+                return await _borrowerRepo.GetBorrowers3YearAnniversaryAsync(month);
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
-        public async Task<decimal> CalculateInterestAsync(int loanId)
+        public async Task<LoanInterestInfo> CalculateInterestAsync(int loanId)
         {
-           return await _loanRepo.CalculateInterestAsync(loanId);
+            try
+            {
+                return await _loanRepo.CalculateInterestAsync(loanId);
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
-        public Task<List<(int LoanId, string BorrowerName, decimal TotalBorrowedAmount, decimal Interest)>> CalculateAllLoansInterestAsync()
+        public async Task<List<LoanInterestInfo>> CalculateAllLoansInterestAsync()
         {
-            return _borrowerRepo.CalculateAllLoansInterestAsync();
+            try
+            {
+                return await _borrowerRepo.CalculateAllLoansInterestAsync();
+            }
+            catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message, ex.ErrorCode);
+            }
         }
 
         public async Task DeleteBorrowerAsync(int Id)
         {
-            await _borrowerRepo.DeleteAsync(Id);
+            try
+            {
+                await _borrowerRepo.DeleteAsync(Id);
+            }
+             catch (LoanServiceException ex)
+            {
+                throw new LoanServiceException(ex.Message,ex.ErrorCode);
+            }
         }
-
-
     }
 }

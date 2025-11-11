@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using MoneyTrackr.Borrowers.Models;
+using System.Linq.Expressions;
 
 namespace MoneyTrackr.Borrowers.Repository
 {
@@ -24,9 +25,9 @@ namespace MoneyTrackr.Borrowers.Repository
 
         Task<IEnumerable<T>> GetBorrowers3YearAnniversaryAsync(int month);
 
-        Task<decimal> CalculateInterestAsync(int loanId);
+        Task<LoanInterestInfo> CalculateInterestAsync(int loanId);
 
-        Task<List<(int LoanId, string BorrowerName, decimal TotalBorrowedAmount, decimal Interest)>> CalculateAllLoansInterestAsync();
+        Task<List<LoanInterestInfo>> CalculateAllLoansInterestAsync();
 
     }
 }

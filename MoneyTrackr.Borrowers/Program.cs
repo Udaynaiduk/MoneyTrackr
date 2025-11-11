@@ -11,9 +11,17 @@ namespace MoneyTrackr.Borrowers
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Read connection string from environment variable
+            var connectionString = Environment.GetEnvironmentVariable("MoneyTrackrDatabase");
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("MoneyTrackrDatabase environment variable is not set.");
+            }
+
             builder.Services.AddDbContext<MoneyTrackrDbContext>(options =>
                 options.UseMySql(
-                    builder.Configuration.GetConnectionString("MoneyTrackrDatabase"),
+                    connectionString,
                     new MySqlServerVersion(new Version(8, 0, 36))  // Adjust version if needed
                 )
             );

@@ -22,7 +22,7 @@
   },
   {
     "ContainingType": "MoneyTrackr.Borrowers.Controllers.MoneyTrackrController",
-    "Method": "Deleteborrower",
+    "Method": "DeleteBorrower",
     "RelativePath": "api/MoneyTrackr/borrower/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,

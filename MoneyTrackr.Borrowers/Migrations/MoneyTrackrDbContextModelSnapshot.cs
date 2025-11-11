@@ -42,8 +42,8 @@ namespace MoneyTrackr.Borrowers.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("varchar(15)");
+                        .HasMaxLength(10)
+                        .HasColumnType("varchar(10)");
 
                     b.HasKey("Id");
 
@@ -59,19 +59,22 @@ namespace MoneyTrackr.Borrowers.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("BorrowerId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("DeductedAmount")
-                        .HasColumnType("decimal(65,30)");
-
                     b.Property<decimal>("InterestRate")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<bool>("IsPaid")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<decimal>("PartialPayment")
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<DateTime?>("PartialPaymentPaidDate")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime(6)");

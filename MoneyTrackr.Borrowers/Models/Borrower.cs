@@ -1,34 +1,47 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace MoneyTrackr.Borrowers.Models
 {
+    [Table("Borrowers")]
     public class Borrower
     {
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        
         [MaxLength(150)]
-        public string FullName { get; set; }
+        [Column(TypeName = "varchar(150)")]
+        public string FullName { get; set; } = string.Empty;
 
-        [Required]
-        [MaxLength(15)]
-        public string PhoneNumber { get; set; }
+        
+        [MaxLength(10)]
+        [Column(TypeName = "varchar(10)")]
+        public string PhoneNumber { get; set; } = string.Empty;
 
-        [Required]
         [MaxLength(250)]
-        public string Address { get; set; }
+        [Column(TypeName = "varchar(250)")]
+        public string Address { get; set; } = string.Empty;
 
-        // Navigation property for multiple loans
-        public ICollection<Loan> Loans { get; set; } = new List<Loan>();
+        // Navigation property — multiple loans per borrower
+        public virtual ICollection<Loan> Loans { get; set; } = new List<Loan>();
 
-        // Helper property: has any loan reached 3 years
+        // Derived property: checks if any loan reached 3 years
+        [NotMapped]
         public bool HasReachedThreeYears =>
-            Loans != null && Loans.Any(l => DateTime.Now >= l.StartDate.AddYears(3));
+            Loans != null && Loans.Any(l => DateTime.UtcNow >= l.StartDate.AddYears(3));
 
-        // Optional: total borrowed amount
+        // Derived property: total borrowed amount (only active loans)
+        [NotMapped]
         public decimal TotalBorrowedAmount =>
-            Loans != null ? Loans.Sum(l => l.Amount) : 0;
+            Loans?.Sum(l => l.Amount) ?? 0m;
+
+        // Derived property: total still unpaid (optional, useful in UI)
+        [NotMapped]
+        public decimal TotalRemaining =>
+            Loans?.Sum(l => l.Amount - l.PartialPayment) ?? 0m;
     }
 }
-

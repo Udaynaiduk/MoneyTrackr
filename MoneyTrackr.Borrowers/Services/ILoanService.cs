@@ -28,8 +28,8 @@ namespace MoneyTrackr.Borrowers.Services
         /// </summary>
         Task<IEnumerable<Borrower>> GetAllBorrowersWhoReached3YearsInMonthAsync(int month);
 
-        Task<decimal> CalculateInterestAsync(int loanId);
+        Task<LoanInterestInfo> CalculateInterestAsync(int loanId);
 
-        Task<List<(int LoanId, string BorrowerName, decimal TotalBorrowedAmount, decimal Interest)>> CalculateAllLoansInterestAsync();
+        Task<List<LoanInterestInfo>> CalculateAllLoansInterestAsync();
     }
 }

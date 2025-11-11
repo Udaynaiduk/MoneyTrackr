@@ -5,7 +5,7 @@
 namespace MoneyTrackr.Borrowers.Migrations
 {
     /// <inheritdoc />
-    public partial class Four : Migration
+    public partial class second : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

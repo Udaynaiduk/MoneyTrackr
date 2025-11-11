@@ -281,11 +281,6 @@
   "components": {
     "schemas": {
       "Borrower": {
-        "required": [
-          "address",
-          "fullName",
-          "phoneNumber"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -294,18 +289,18 @@
           },
           "fullName": {
             "maxLength": 150,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "phoneNumber": {
-            "maxLength": 15,
-            "minLength": 1,
-            "type": "string"
+            "maxLength": 10,
+            "type": "string",
+            "nullable": true
           },
           "address": {
             "maxLength": 250,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "loans": {
             "type": "array",
@@ -322,17 +317,16 @@
             "type": "number",
             "format": "double",
             "readOnly": true
+          },
+          "totalRemaining": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
           }
         },
         "additionalProperties": false
       },
       "Loan": {
-        "required": [
-          "amount",
-          "borrowerId",
-          "interestRate",
-          "startDate"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -355,9 +349,14 @@
             "type": "string",
             "format": "date-time"
           },
-          "deductedAmount": {
+          "partialPayment": {
             "type": "number",
             "format": "double"
+          },
+          "partialPaymentPaidDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
           "endDate": {
             "type": "string",
